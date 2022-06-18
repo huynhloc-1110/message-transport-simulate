@@ -1,6 +1,7 @@
 package testing;
 
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
@@ -10,12 +11,20 @@ import dataStructure.Stack;
 
 class StackTest {
 
+	private Stack<Integer> stack;
+	private Random random;
+	
+	@BeforeEach
+	void init() {
+		stack = new Stack<>();
+		random = new Random();
+	}
+	
 	@Test
 	void testPushAndPop() {
 		/*
 		 * Push numbers sequentially to queue.
 		 */
-		Stack<Integer> stack = new Stack<>();
 		for (int i = 1; i <= 10; i++) {
 			stack.push(i);
 		}
@@ -34,8 +43,6 @@ class StackTest {
 		 * Push a random number to stack.
 		 * Check if the peek is that number.
 		 */
-		Stack<Integer> stack = new Stack<>();
-		Random random = new Random();
 		int r1 = random.nextInt(9);
 		stack.push(r1);
 		assertEquals(r1, stack.peek());
@@ -55,8 +62,6 @@ class StackTest {
 		 * Push a random amount of numbers to the the stack.
 		 * Check the size of the queue.
 		 */
-		Stack<Integer> stack = new Stack<>();
-		Random random = new Random();
 		int length = random.nextInt(1, 20);
 		for (int i = 1; i <= length; i++) {
 			stack.push(i);
@@ -67,14 +72,13 @@ class StackTest {
 	@Test
 	void testIsEmpty() {
 		/*
-		 * Generate the stack and ensure that it is empty.
+		 * Check if the initial stack is empty.
 		 */
-		Stack<Integer> stack = new Stack<>();
 		assertTrue(stack.isEmpty());
 
 		/*
 		 * Push a random amount of numbers to the the stack.
-		 * Ensure that the stack is not empty.
+		 * Check if the stack is not empty.
 		 */
 		Random random = new Random();
 		int length = random.nextInt(1, 20);
@@ -96,8 +100,6 @@ class StackTest {
 		 * Push a random amount of elements to the stack.
 		 * Print all elements in the stack.
 		 */
-		Stack<Integer> stack = new Stack<>();
-		Random random = new Random();
 		int length = random.nextInt(1, 20);
 		for (int i = 1; i <= length; i++) {
 			stack.push(i);
