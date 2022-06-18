@@ -62,7 +62,7 @@ public class Messager {
 	 * 
 	 * @return true if the messager is connected with another
 	 */
-	private boolean isConnected() {
+	public boolean isConnected() {
 		return this.partner != null;
 	}
 	
