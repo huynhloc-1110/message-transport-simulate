@@ -32,7 +32,6 @@ public class Stack<E> implements AbstractStack<E> {
 	 */
 	private int size;
 	
-	@Override
 	public void push(E element) {
 		Node<E> newNode = new Node<>(element);
 		newNode.previous = top;
@@ -40,7 +39,6 @@ public class Stack<E> implements AbstractStack<E> {
 		size++;
 	}
 	
-	@Override
 	public E pop() {
 		if (top == null) return null;
 		
@@ -52,24 +50,20 @@ public class Stack<E> implements AbstractStack<E> {
 		return element;
 	}
 	
-	@Override
 	public E peek() {
 		if (top == null) return null;
 		
 		return top.element;
 	}
 	
-	@Override
 	public int size() {
 		return size;
 	}
 	
-	@Override
 	public boolean isEmpty() {
 		return (top == null);
 	}
 	
-	@Override
 	public void printAllElements() {
 		if (this.isEmpty()) {
 			System.out.println("This stack is empty!");

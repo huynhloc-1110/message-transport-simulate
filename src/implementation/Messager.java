@@ -39,7 +39,7 @@ public class Messager {
 	
 	/**
 	 * Creates a messager object with a name, an empty stack and an empty queue.
-	 * The partner (acts as a connection) is initiated as null.
+	 * The partner (acts as a connection) is initiated as {@code null}.
 	 * 
 	 * @param name the name of the messager
 	 */
@@ -51,16 +51,16 @@ public class Messager {
 	
 	/**
 	 * Creates a messager object named "Unamed" with an empty stack and an empty queue.
-	 * The partner (acts as a connection) is initiated as null.
+	 * The partner (acts as a connection) is initiated as {@code null}.
 	 */
 	public Messager() {
 		this("Unamed");
 	}
 	
 	/**
-	 * Returns true if the messager is connected with another.
+	 * Returns {@code true} if the messager is connected with another.
 	 * 
-	 * @return true if the messager is connected with another
+	 * @return {@code true} if the messager is connected with another
 	 */
 	public boolean isConnected() {
 		return this.partner != null;
@@ -68,11 +68,12 @@ public class Messager {
 	
 	/**
 	 * Connects the messager with another.
-	 * Connection fails if the other messager is null or the same as the current messager.
+	 * Connection fails if the other messager is {@code null}
+	 * or the same as the current messager.
 	 * 
 	 * @param partner the other messager to be connected with
 	 * @throws IllegalArgumentException if the other messager
-	 * is null or the same as the current messager
+	 * is {@code null} or the same as the current messager
 	 */
 	public void connect(Messager partner) throws IllegalArgumentException {
 		if (partner == null || partner == this.partner)

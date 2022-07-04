@@ -31,7 +31,6 @@ public class Queue<E> implements AbstractQueue<E> {
 	 */
 	private int size;
 	
-	@Override
 	public void offer(E element) {
 		Node<E> newNode = new Node<>(element);
 		if (head == null)
@@ -46,7 +45,6 @@ public class Queue<E> implements AbstractQueue<E> {
 		size++;
 	}
 	
-	@Override
 	public E poll() {
 		if (head == null)
 			return null;
@@ -59,7 +57,6 @@ public class Queue<E> implements AbstractQueue<E> {
 		return element;
 	}
 	
-	@Override
 	public E peek() {
 		if (head == null)
 			return null;
@@ -67,17 +64,14 @@ public class Queue<E> implements AbstractQueue<E> {
 		return head.element;
 	}
 	
-	@Override
 	public int size() {
 		return size;
 	}
 	
-	@Override
 	public boolean isEmpty() {
 		return (head == null);
 	}
 	
-	@Override
 	public void printAllElements() {
 		if (this.isEmpty()) {
 			System.out.println("This queue is empty!");

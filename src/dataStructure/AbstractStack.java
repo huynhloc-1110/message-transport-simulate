@@ -20,18 +20,18 @@ public interface AbstractStack<E> {
 	/**
 	 * Removes the element at the top of the stack
 	 * and returns that element as the value of this function.
-	 * If the stack is empty, return null instead.
+	 * If the stack is empty, return {@code null} instead.
 	 * This action will decrease the size of the stack.
 	 * 
-	 * @return the element at the top of the stack, or null if the stack is empty
+	 * @return the element at the top of the stack, or {@code null} if the stack is empty
 	 */
 	E pop();
 	
 	/**
 	 * Retrieves, but does not remove, the top of the stack,
-	 * or returns null if the stack is empty.
+	 * or returns {@code null} if the stack is empty.
 	 * 
-	 * @return the top of the stack, or null if the stack is empty
+	 * @return the top of the stack, or {@code null} if the stack is empty
 	 */
 	E peek();
 	
@@ -43,9 +43,9 @@ public interface AbstractStack<E> {
 	int size();
 	
 	/**
-	 * Returns true if the stack contains no elements.
+	 * Returns {@code true} if the stack contains no elements.
 	 * 
-	 * @return true if the stack contains no elements
+	 * @return {@code true} if the stack contains no elements
 	 */
 	boolean isEmpty();
 	

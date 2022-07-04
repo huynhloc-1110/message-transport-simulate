@@ -18,18 +18,18 @@ public interface AbstractQueue<E> {
 	
 	/**
 	 * Retrieves and removes the head of the queue,
-	 * or returns null if the queue is empty.
+	 * or returns {@code null} if the queue is empty.
 	 * This action will decrease the size of the queue.
 	 * 
-	 * @return the head of the queue, or null if the queue is empty
+	 * @return the head of the queue, or {@code null} if the queue is empty
 	 */
 	E poll();
 	
 	/**
 	 * Retrieves, but does not remove, the head of the queue,
-	 * or returns null if the queue is empty.
+	 * or returns {@code null} if the queue is empty.
 	 * 
-	 * @return the head of the queue, or null if the queue is empty
+	 * @return the head of the queue, or {@code null} if the queue is empty
 	 */
 	E peek();
 	
@@ -41,9 +41,9 @@ public interface AbstractQueue<E> {
 	int size();
 	
 	/**
-	 * Returns true if the queue contains no elements.
+	 * Returns {@code true} if the queue contains no elements.
 	 * 
-	 * @return true if the queue contains no elements
+	 * @return {@code true} if the queue contains no elements
 	 */
 	boolean isEmpty();
 	
